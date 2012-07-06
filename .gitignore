@@ -1,0 +1,4 @@
+*.pyc
+build
+dist
+periodic_kdtree.egg-info
