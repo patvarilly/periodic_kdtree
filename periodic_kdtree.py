@@ -328,7 +328,7 @@ class PeriodicCKDTree(cKDTree):
         # is a single point, not an array of points
         
         # Cap r
-        r = np.min(r, self.max_distance_upper_bound)
+        r = min(r, self.max_distance_upper_bound)
 
         # Run queries over all relevant images of x
         results = []
