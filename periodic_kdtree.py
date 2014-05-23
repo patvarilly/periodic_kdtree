@@ -102,8 +102,8 @@ class PeriodicKDTree(KDTree):
         # all neighbors within the given distance_upper_bound".
 
         # Cap distance_upper_bound
-        distance_upper_bound = np.min(distance_upper_bound,
-                                      self.max_distance_upper_bound)
+        distance_upper_bound = np.min([distance_upper_bound,
+                                      self.max_distance_upper_bound])
 
         # Run queries over all relevant images of x
         hits_list = []
@@ -213,8 +213,8 @@ class PeriodicCKDTree(cKDTree):
         # all neighbors within the given distance_upper_bound".
 
         # Cap distance_upper_bound
-        distance_upper_bound = np.min(distance_upper_bound,
-                                      self.max_distance_upper_bound)
+        distance_upper_bound = np.min([distance_upper_bound,
+                                      self.max_distance_upper_bound])
 
         # Run queries over all relevant images of x
         hits_list = []
